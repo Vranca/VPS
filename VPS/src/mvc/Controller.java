@@ -38,49 +38,57 @@ public class Controller<Component extends java.awt.Component, Model> implements 
 	@Override
 	public void mouseClicked(MouseEvent e)
 	{
-		mouseListener.mouseClicked(e);
+		if (mouseListener != null)
+			mouseListener.mouseClicked(e);
 	}
 
 	@Override
 	public void mousePressed(MouseEvent e)
 	{
-		mouseListener.mousePressed(e);
+		if (mouseListener != null)
+			mouseListener.mousePressed(e);
 
 	}
 
 	@Override
 	public void mouseReleased(MouseEvent e)
 	{
-		mouseListener.mouseReleased(e);
+		if (mouseListener != null)
+			mouseListener.mouseReleased(e);
 	}
 
 	@Override
 	public void mouseEntered(MouseEvent e)
 	{
-		mouseListener.mouseEntered(e);
+		if (mouseListener != null)
+			mouseListener.mouseEntered(e);
 	}
 
 	@Override
 	public void mouseExited(MouseEvent e)
 	{
-		mouseListener.mouseExited(e);
+		if (mouseListener != null)
+			mouseListener.mouseExited(e);
 	}
 
 	@Override
 	public void mouseDragged(MouseEvent e)
 	{
-		mouseMotionListener.mouseDragged(e);
+		if (mouseMotionListener != null)
+			mouseMotionListener.mouseDragged(e);
 	}
 
 	@Override
 	public void mouseMoved(MouseEvent e)
 	{
-		mouseMotionListener.mouseMoved(e);
+		if (mouseMotionListener != null)
+			mouseMotionListener.mouseMoved(e);
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent e)
 	{
-		actionListener.actionPerformed(e);
+		if (actionListener != null)
+			actionListener.actionPerformed(e);
 	}
 }

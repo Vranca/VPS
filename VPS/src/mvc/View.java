@@ -27,11 +27,6 @@ public class View<Component extends java.awt.Component, Model> implements Observ
 		return model;
 	}
 
-	public final void setComponent(Component component)
-	{
-		this.component = component;
-	}
-
 	public final Component getComponent()
 	{
 		return component;
